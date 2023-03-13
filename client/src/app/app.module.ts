@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -23,6 +24,7 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
     PostListComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
