@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const Post = require('./models/post');
 
 mongoose
     .connect(
-        'mongodb+srv://brownee06:brownee06@meanappdb.tal6js8.mongodb.net/?retryWrites=true&w=majority'
+        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_USER}@meanappdb.tal6js8.mongodb.net/?retryWrites=true&w=majority`
     )
     .then(() => {
         console.log('Connected to database!');
